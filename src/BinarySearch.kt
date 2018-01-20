@@ -34,28 +34,28 @@ fun main(args: Array<String>) {
 }
 
 fun assertBinarySearch(binarySearch: (array: IntArray, value: Int) -> Int?) {
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 3) == 2}
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 1) == 0}
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 5) == 4}
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 6) == 5}
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 7) == null}
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5), 3) == 2}
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5), 1) == 0}
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5), 5) == 4}
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5), 2) == 1}
-    assert{binarySearch(intArrayOf(1, 2, 3, 4, 5), 7) == null}
-    assert{binarySearch(intArrayOf(1), 1) == 0}
-    assert{binarySearch(intArrayOf(1), 7) == null}
-    assert{binarySearch(intArrayOf(), 7) == null}
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 3) == 2 }
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 1) == 0 }
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 5) == 4 }
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 6) == 5 }
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5, 6), 7) == null }
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5), 3) == 2 }
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5), 1) == 0 }
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5), 5) == 4 }
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5), 2) == 1 }
+    assert { binarySearch(intArrayOf(1, 2, 3, 4, 5), 7) == null }
+    assert { binarySearch(intArrayOf(1), 1) == 0 }
+    assert { binarySearch(intArrayOf(1), 7) == null }
+    assert { binarySearch(intArrayOf(), 7) == null }
 }
 
 var testNumber = 1
 
-fun assert(function : () -> Boolean) {
+fun assert(function: () -> Boolean) {
     if (function()) {
-        println ("$testNumber OK")
+        println("$testNumber OK")
     } else {
-        println ("$testNumber Fail")
+        println("$testNumber Fail")
     }
     testNumber++
 }
